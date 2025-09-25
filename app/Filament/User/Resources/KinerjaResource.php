@@ -26,7 +26,7 @@ class KinerjaResource extends Resource
 
     protected static ?string $navigationLabel = 'Sasaran Kinerja';
 
-    protected static ?string $modelLabel = 'Sasaran Kinerja KHP. Datu Dana Suyasa';
+    protected static ?string $modelLabel = 'Sasaran Kerja Sama Operasional';
 
     protected static ?int $navigationSort = 4;
 

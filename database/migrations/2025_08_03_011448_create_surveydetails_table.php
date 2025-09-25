@@ -16,7 +16,6 @@ return new class extends Migration
             $table->foreignId('survey_id')->nullable()->constrained('surveys')->cascadeOnDelete();
             $table->string('no_bidang')->nullable();
             $table->string('nama')->nullable();
-            $table->foreignId('statshm_id')->nullable()->constrained('statshms')->cascadeOnDelete();
             $table->integer('shmsg_id')->nullable();
             $table->string('alashak_sg')->nullable();
             $table->string('alamat_tanah')->nullable();

@@ -10,9 +10,15 @@ use App\Models\Kapkem;
 use App\Models\Kabkota;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
+use Filament\Actions\Concerns\InteractsWithActions;
+use Filament\Actions\Contracts\HasActions;
+use Filament\Forms\Concerns\InteractsWithForms;
 
-class PetaKalurahan extends Page
+class PetaKalurahan extends Page implements HasActions
 {
+    use InteractsWithActions;
+    use InteractsWithForms;
+
     protected static ?string $navigationIcon = 'heroicon-o-map';
     protected static string $view = 'filament.user.pages.peta-kalurahan';
     protected static ?string $title = 'Peta Tanah Kalurahan';
@@ -34,6 +40,15 @@ class PetaKalurahan extends Page
     protected function getHeaderActions(): array
     {
         return [
+            Action::make('mulai')
+                ->label('Mulai')
+                ->color('primary')
+                ->icon('heroicon-o-arrow-path')
+                ->tooltip('Klik untuk memulai')
+                ->action(function () {
+                    return redirect(request()->header('Referer') ?? route('filament.user.pages.peta-kalurahan'));
+                }),
+
             Action::make('pilihKalurahan')
                 ->label('PILIH KALURAHAN')
                 ->icon('heroicon-o-building-office-2')

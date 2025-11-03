@@ -104,6 +104,9 @@ class UserPanelProvider extends PanelProvider
                 PanelsRenderHook::FOOTER,
                 fn() => view('footer')
             )
-            ->databaseTransactions();
+            ->databaseTransactions()
+            ->resources([
+                config('filament-logger.activity_resource')
+            ]);
     }
 }

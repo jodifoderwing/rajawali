@@ -22,7 +22,7 @@ class PetaSebaran extends Page implements HasActions
     protected static ?string $navigationIcon = 'heroicon-o-map';
     protected static string $view = 'filament.user.pages.peta-sebaran';
     protected static ?string $title = 'Peta Tanah Kasultanan';
-    protected static ?string $navigationGroup = 'Peta';
+    protected static ?string $navigationGroup = 'PETA';
     protected static ?string $slug = 'peta-sebaran';
 
     public ?int $kalkel_id = null;

@@ -39,12 +39,8 @@ class UserPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Blue, //Orange, Indigo, //Blue,   //Gray,   //Rose,   //Amber,  // Emerald,
             ])->navigationGroups([
-                'Sekretariat',
-                'Tanah Kasultanan',
-                'Tanah Kalurahan',
-                'Peta',
-                'Kearsipan',
-                'Bebadan Pangreksa Loka'
+                'HUMAN RESOURCES',
+                'PETA',
             ])
             // ->breadcrumbs(false)
             ->font(

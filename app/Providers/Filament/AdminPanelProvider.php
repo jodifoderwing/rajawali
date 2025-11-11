@@ -110,6 +110,9 @@ class AdminPanelProvider extends PanelProvider
                 // PanelsRenderHook::BODY_END,
                 PanelsRenderHook::FOOTER,
                 fn() => view('footer')
-            );
+            )
+            ->resources([
+                config('filament-logger.activity_resource')
+            ]);
     }
 }
